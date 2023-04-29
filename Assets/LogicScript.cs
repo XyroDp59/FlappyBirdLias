@@ -107,6 +107,7 @@ public class LogicScript : MonoBehaviour
     public void startGame()
     {
         player.SetActive(true);
+        Debug.Log("DEBUG player setActive");
         titleScreen.SetActive(false);
         pipeSpawner.SetActive(true);
     }
@@ -143,12 +144,12 @@ public class LogicScript : MonoBehaviour
         {
             playerStats.currentSprite = playerSpriteRenderer.sprite;
             playerStats.spriteBought.Add(playerStats.currentSprite);
-            Debug.Log("current sprite == null");
+            Debug.Log("DEBUG current sprite == null");
         }
         else
         {
             playerSpriteRenderer.sprite = playerStats.currentSprite;
-            Debug.Log("on a bien transmis le current sprite");
+            Debug.Log("DEBUG on a bien transmis le current sprite");
         }
     }
 }
