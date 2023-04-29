@@ -24,9 +24,13 @@ public class LogicScript : MonoBehaviour
     public int maxBonusPipeNum;
 
     public float Vitesse()
-    {
+    {            
         int n = (int)((playerScore - scoreWhenBonus) / 10);
         float v = v0 * Mathf.Pow(q, n);
+        if (gameOverScreen.activeSelf)
+        {
+            return v0/2;
+        }
         return v;  
     }
 

@@ -50,7 +50,6 @@ public class scriptpipespawner : MonoBehaviour
         }
         else
         {
-
             SpawnObject(pipe);
             timer = 0;
             hasCoinSpawned = false;
